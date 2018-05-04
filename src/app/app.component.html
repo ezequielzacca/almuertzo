@@ -1,9 +1,56 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-navbar></app-navbar>
-<div style="text-align:center">
+<div class="lista-container" style="text-align:center">
   <mat-card>
     <div class="container">
+      <div class="order">
+        <span class="main-dish">
+          Napolitana
+        </span>
+        <span class="salad">
+          <span>Zanahoria Hervida</span> |
+          <span>Coreanito</span> |
+          <span>Brocoli</span>
+        </span>
+      </div>
+      <div class="name">E</div>
+
+
+    </div>
+  </mat-card>
+  <mat-card>
+    <div class="container">
+      <div class="order">
+        <span class="main-dish">
+          Napolitana
+        </span>
+        <span class="salad">
+          <span>Zanahoria Hervida</span> |
+          <span>Coreanito</span> |
+          <span>Brocoli</span>
+        </span>
+      </div>
+      <div class="name">E</div>
+    </div>
+  </mat-card>
+  <mat-card>
+      <div class="container">
         <div class="order">
+          <span class="main-dish">
+            Napolitana
+          </span>
+          <span class="salad">
+            <span>Zanahoria Hervida</span> |
+            <span>Coreanito</span> |
+            <span>Brocoli</span>
+          </span>
+        </div>
+        <div class="name">E</div>
+      </div>
+    </mat-card>
+    <mat-card>
+        <div class="container">
+          <div class="order">
             <span class="main-dish">
               Napolitana
             </span>
@@ -13,14 +60,12 @@
               <span>Brocoli</span>
             </span>
           </div>
-      <div class="name">E</div>
-      
-
-    </div>
-  </mat-card>
-  <mat-card>
-      <div class="container">
-          <div class="order">
+          <div class="name">E</div>
+        </div>
+      </mat-card>
+      <mat-card>
+          <div class="container">
+            <div class="order">
               <span class="main-dish">
                 Napolitana
               </span>
@@ -30,26 +75,54 @@
                 <span>Brocoli</span>
               </span>
             </div>
-        <div class="name">E</div>
-        
-  
+            <div class="name">E</div>
+          </div>
+        </mat-card>
+  <mat-card>
+    <div class="container">
+      <div class="order">
+        <span class="main-dish">
+          Napolitana
+        </span>
+        <span class="salad">
+          <span>Zanahoria Hervida</span> |
+          <span>Coreanito</span> |
+          <span>Brocoli</span>
+        </span>
       </div>
-    </mat-card>
-    <mat-card>
-        <div class="container">
-            <div class="order">
-                <span class="main-dish">
-                  Napolitana
-                </span>
-                <span class="salad">
-                  <span>Zanahoria Hervida</span> |
-                  <span>Coreanito</span> |
-                  <span>Brocoli</span>
-                </span>
-              </div>
-          <div class="name">E</div>
-          
-    
-        </div>
-      </mat-card>
+      <div class="name">E</div>
+
+
+    </div>
+  </mat-card>
+</div>
+<div class="form-container">
+  <h1>add order</h1>
+  <div class="order-form">
+    <div class="row">
+      <mat-form-field>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+        <mat-label>Main Dish</mat-label>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-select multiple>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+        <mat-label>Salad</mat-label>
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <button class="lined">add</button>
+    </div>
+
+
+  </div>
 </div>
