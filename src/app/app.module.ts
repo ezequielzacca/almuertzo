@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 /**Angular Material */
 import {
   MatToolbarModule,
-  MatIconModule
+  MatIconModule,
+  MatInputModule,
+  MatFormFieldModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -19,7 +21,10 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

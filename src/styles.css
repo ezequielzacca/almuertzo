@@ -3,3 +3,6 @@
 body {
     margin: 0;
 }
+.mat-form-field-underline{
+    background-color:white !important;
+}

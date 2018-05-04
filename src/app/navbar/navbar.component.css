@@ -5,3 +5,12 @@
   .example-spacer {
     flex: 1 1 auto;
   }
+  .name-container input,.name-container mat-label {
+      color:white;
+      
+}
+
+.name-container input {
+    height: 32px;
+}
+
