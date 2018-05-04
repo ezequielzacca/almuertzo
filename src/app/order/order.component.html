@@ -2,12 +2,12 @@
     <div class="container">
       <div class="order">
         <span class="main-dish">
-          Napolitana
+          {{ order.main }}
         </span>
         <span class="salad">
-          <span>Zanahoria Hervida</span> |
-          <span>Coreanito</span> |
-          <span>Brocoli</span>
+          <span>
+            {{ order.salads.join(' - ')}}
+          </span>
         </span>
       </div>
       <div class="name">E</div>
