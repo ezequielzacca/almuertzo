@@ -25,6 +25,14 @@ export class OrdersService {
         })
     }
 
+    public getMains():Array<string>{
+        return this.mains;
+    }
+
+    public getSalads():Array<string>{
+        return this.salads;
+    }
+
     private randomBetween(floor: number, top: number): number {
         return Math.floor(Math.random() * top) + floor;
     }

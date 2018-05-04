@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
+import { OrdersService } from '../../services/orders.service';
+interface IMDSelectOption {
+  value: string, viewValue: string
+}
 @Component({
   selector: 'app-new-order',
   templateUrl: './new-order.component.html',
   styleUrls: ['./new-order.component.css']
 })
 export class NewOrderComponent implements OnInit {
-  mains = [
-    {value: 'Mila', viewValue: 'Mila'},
-    {value: 'Suprema', viewValue: 'Suprema'},
-    {value: 'Napo', viewValue: 'Napo'}
-  ];
+  mains: Array<IMDSelectOption> = [];
 
-  salads = [
-    {value: 'Chaucha', viewValue: 'Chaucha'},
-    {value: 'Coreanito', viewValue: 'Coreanito'},
-    {value: 'Zapallito', viewValue: 'Zapallito'}
-  ];
-  constructor() { }
+  salads = [];
+  constructor(private ordersService: OrdersService) { }
 
   ngOnInit() {
+    this.mains = this.ordersService.getMains()
+      .map(main => ({ value: main, viewValue: main }));
+    this.salads = this.ordersService.getSalads()
+      .map(salad => ({ value: salad, viewValue: salad }));
   }
 
 }
