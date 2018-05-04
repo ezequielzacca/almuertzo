@@ -6,11 +6,17 @@
     flex: 1 1 auto;
   }
   .name-container input,.name-container mat-label {
-      color:white;
+      color:rgb(239,236,247);
       
 }
 
 .name-container input {
-    height: 32px;
+    height: 40px;
+}
+.name-container {
+    width: 100%;
+}
+.coloured-icon{
+    color:rgb(239,236,247);
 }
 
