@@ -1,10 +1,5 @@
 <div class="lista-container" style="text-align:center">
   
-    <app-order [order]="{main:'Napoliatana',salads:['Arroz','Fideos','Lentejas']}"></app-order>
-    <app-order [order]="{main:'Napoliatana',salads:['Arroz','Fideos','Lentejas']}"></app-order>
-    <app-order [order]="{main:'Napoliatana',salads:['Arroz','Fideos','Lentejas']}"></app-order>
-    <app-order [order]="{main:'Napoliatana',salads:['Arroz','Fideos','Lentejas']}"></app-order>
-    <app-order [order]="{main:'Napoliatana',salads:['Arroz','Fideos','Lentejas']}"></app-order>
-    <app-order [order]="{main:'Napoliatana',salads:['Arroz','Fideos','Lentejas']}"></app-order>
+    <app-order *ngFor="let order of orders"[order]="order"></app-order>
       
   </div>
