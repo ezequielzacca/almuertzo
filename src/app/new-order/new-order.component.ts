@@ -11,7 +11,7 @@ interface IMDSelectOption {
 export class NewOrderComponent implements OnInit {
   mains: Array<IMDSelectOption> = [];
 
-  salads = [];
+  salads: Array<IMDSelectOption>= [];
   constructor(private ordersService: OrdersService) { }
 
   ngOnInit() {
