@@ -18,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
 import { NewOrderComponent } from './new-order/new-order.component';
 import { OrderListComponent } from './order-list/order-list.component';
+import { OrdersService } from '../services/orders.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { OrderListComponent } from './order-list/order-list.component';
     MatOptionModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [OrdersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

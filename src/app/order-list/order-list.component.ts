@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IOrder } from '../../interfaces/order.interface';
+import { OrdersService } from '../../services/orders.service';
 
 @Component({
   selector: 'app-order-list',
@@ -8,24 +9,10 @@ import { IOrder } from '../../interfaces/order.interface';
 })
 export class OrderListComponent implements OnInit {
   public orders:Array<IOrder>;
-  constructor() { }
+  constructor(private ordersService:OrdersService) { }
 
   ngOnInit() {
-    this.orders = [{
-      hungryPerson:"FX",
-      main:"Napolitana",
-      salads:['Brocoli','Lentejas','Chauchas']
-    },
-    {
-      hungryPerson:"Pancho",
-      main:"Pollo",
-      salads:['Huevo','Coreanito','Zapallito']
-    },
-    {
-      hungryPerson:"Ezequiel",
-      main:"Suprema",
-      salads:['Arroz','Lentejas','Fideos']
-    }]
+    this.orders = this.ordersService.getOrders();
   }
 
 }
