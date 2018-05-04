@@ -1,0 +1,38 @@
+.form-container{
+    text-align: center;
+    height: 35vh;
+    box-shadow: 1px -1px rgba(124,134,206,0.3);
+    width: 100%;
+    background-color: rgb(90,105,198);
+    
+}
+.form-container h1{
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    color:rgb(239,236,247);
+    padding-top:15px;
+}
+
+.form-container row{
+    width: 100%;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    
+}
+.form-container .row mat-form-field{
+    width: 500px;
+    
+}
+.lined{
+    border: 1px white solid;
+    height: 40px;
+    width: 170px;
+    background-color: transparent;
+    border-radius: 5px;
+    color:white;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+
+}

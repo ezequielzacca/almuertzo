@@ -1,0 +1,30 @@
+<div class="form-container">
+    <h1>add order</h1>
+    <div class="order-form">
+      <div class="row">
+        <mat-form-field>
+          <mat-select>
+            <mat-option *ngFor="let food of mains" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+          <mat-label>Main Dish</mat-label>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <mat-select multiple>
+            <mat-option *ngFor="let food of salads" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+          <mat-label>Salad</mat-label>
+        </mat-form-field>
+      </div>
+      <div class="row">
+          <button class="lined">ADD ORDER</button>
+      </div>
+  
+  
+    </div>
+  </div>
