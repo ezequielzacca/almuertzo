@@ -55,3 +55,39 @@ mat-card .container .order .salad span{
     display:inline-block;
     margin: 5px auto;
 }
+
+@media (max-width:450px){
+    mat-card .container .order .main-dish{
+        display: block;
+        color:white;
+        text-shadow: 2px 2px 3px rgb(90,105,198);
+        text-align: left;
+        font-family: "Roboto", sans-serif;
+        margin-left: 35px;
+        font-size: 25px;
+        font-weight: 100;
+    }
+    mat-card .container .name{
+        background-color: rgb(90,105,198);
+        width:30%;
+        margin:0 auto;
+        line-height: 120px;
+        color:white;
+        font-size: 60px;
+        text-shadow: 4px 4px rgb(124,134,206);
+        font-weight: bold;
+        
+    }
+    mat-card .container .order .salad{
+        font-size: 12px;
+        margin-left: 35px;
+        margin-top: 5px;
+        color:rgb(239,236,247);
+    }
+    mat-card{
+        margin: 20px;        
+    }
+    mat-card .container{        
+        height: 120px;
+    }
+}

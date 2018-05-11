@@ -12,7 +12,7 @@ export class OrderListComponent implements OnInit {
   constructor(private ordersService:OrdersService) { }
 
   ngOnInit() {
-    this.orders = this.ordersService.getOrders();
+    this.orders = this.ordersService.getAll();
   }
 
 }
