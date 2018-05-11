@@ -27,8 +27,8 @@ import {
           
         })
       ),
-      transition("false => true", animate("600ms ease-out")),
-      transition("true => false", animate("600ms ease-out"))
+      transition("false => true", animate("600ms ease-in-out")),
+      transition("true => false", animate("600ms ease-in-out"))
     ])
   ]
 })
