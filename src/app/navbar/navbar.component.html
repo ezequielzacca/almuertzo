@@ -1,7 +1,7 @@
 <mat-toolbar class="mat-elevation-z2">
   <mat-toolbar-row>
     <mat-form-field class="name-container">
-      <input matInput/>
+      <input matInput (change)="changeName($event)" [value]="hungryDude"/>
       <mat-label>HUNGRY GUY'S NAME</mat-label>
     </mat-form-field>
     <span class="example-spacer"></span>

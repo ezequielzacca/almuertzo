@@ -19,6 +19,7 @@ import { OrderComponent } from './order/order.component';
 import { NewOrderComponent } from './new-order/new-order.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrdersService } from '../services/orders.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { OrdersService } from '../services/orders.service';
     MatCardModule,
     MatSelectModule,
     MatOptionModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [OrdersService],
   bootstrap: [AppComponent]

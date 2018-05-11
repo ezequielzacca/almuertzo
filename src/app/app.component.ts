@@ -16,15 +16,14 @@ import {
     trigger("addState", [
       state(
         "false",
-        style({          
-          'transform': 'translateY(200%)  translateZ(0)'
+        style({
+          transform: "translateY(200%)  translateZ(0)"
         })
       ),
       state(
         "true",
         style({
-          'transform': 'none'
-          
+          transform: "none"
         })
       ),
       transition("false => true", animate("600ms ease-in-out")),
@@ -34,16 +33,25 @@ import {
 })
 export class AppComponent implements OnInit {
   title = "app";
-  isVisible:boolean = true;
+  isVisible: boolean = false;
+  hungryPerson = "";
   constructor(private ordersService: OrdersService) {}
 
   ngOnInit() {
     this.ordersService.generateOrders();
   }
 
-  toggleVisibility():void{
-    console.log('toggle called on parent');
+  toggleVisibility(): void {
+    console.log("toggle called on parent");
     this.isVisible = !this.isVisible;
+  }
 
+  addOrder({ main, salads }: { main: string; salads: Array<string> }): void {
+    this.ordersService.add({
+      main: main,
+      salads: salads,
+      hungryPerson: this.hungryPerson
+    });
+    this.toggleVisibility();
   }
 }

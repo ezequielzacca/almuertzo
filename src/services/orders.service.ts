@@ -67,9 +67,15 @@ export class OrdersService {
     return this.orders.find(order => order.id === id);
   }
 
-  public add(order: IOrder): void {
+  public add(order: {
+    main: string;
+    salads: Array<string>;
+    hungryPerson: string;
+  }): void {
     //state is mutated
-    this.orders.push(order);
+    this.orders.push(
+      Object.assign(order, { id: randomBetween(0, 9999999).toString() })
+    );
     //inmutable version
     //this.orders = [...this.orders,order];
   }
@@ -82,6 +88,10 @@ export class OrdersService {
     this.orders.splice(toRemoveIndex, 1);
     //inmutable version
     //this.orders = this.orders.filter(orderBeingIterated=>orderBeingIterated.id!==order.id);
+  }
+
+  public removeAll(): void {
+    this.orders = [];
   }
 
   public edit(order: IOrder): void {

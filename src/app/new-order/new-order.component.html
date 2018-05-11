@@ -1,9 +1,9 @@
 <div class="form-container">
-    <h1>add order</h1>
+    <h1>add order</h1>    
     <div class="order-form">
       <div class="row">
         <mat-form-field>
-          <mat-select>
+          <mat-select required [(ngModel)]="selectedMain">
             <mat-option *ngFor="let food of mains" [value]="food.value">
               {{ food.viewValue }}
             </mat-option>
@@ -13,8 +13,8 @@
       </div>
       <div class="row">
         <mat-form-field>
-          <mat-select multiple>
-            <mat-option *ngFor="let food of salads" [value]="food.value">
+          <mat-select required multiple [(ngModel)]="selectedSalads">
+            <mat-option  *ngFor="let food of salads" [value]="food.value">
               {{ food.viewValue }}
             </mat-option>
           </mat-select>
@@ -22,7 +22,7 @@
         </mat-form-field>
       </div>
       <div class="row">
-          <button (click)="add()" class="lined">ADD ORDER</button>
+          <button type="submit" (click)="add()" class="lined">ADD ORDER</button>
       </div>
   
   

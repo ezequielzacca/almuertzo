@@ -1,4 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-navbar (onToggleAdd)="toggleVisibility()"></app-navbar>
+<app-navbar [(hungryDude)]="hungryPerson" (onToggleAdd)="toggleVisibility()"></app-navbar>
 <app-order-list></app-order-list>
-<app-new-order (closeAddForm)="toggleVisibility()" [@addState]="isVisible"></app-new-order>
+<app-new-order (closeAddForm)="addOrder($event)" [@addState]="isVisible"></app-new-order>
